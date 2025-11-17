@@ -1,36 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Load Netlify Identity -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- CMS Bundle -->
+    <script src="https://unpkg.com/netlify-cms-app@2.15.72/dist/netlify-cms.js"></script>
   </head>
 
   <body>
-    <!-- Load Netlify CMS -->
-    <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
-
-    <!-- Protect Admin Page -->
     <script>
-      const allowed = ["mjfendin@gmail.com"];
-
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user || !allowed.includes(user.email)) {
-            window.location.href = "/";
-          }
-        });
-
-        window.netlifyIdentity.on("login", (user) => {
-          if (allowed.includes(user.email)) {
-            document.location.href = "/admin/";
-          } else {
-            document.location.href = "/";
-          }
-        });
-      }
+      // Tidak menggunakan Netlify Identity karena hosting di Vercel
+      // CMS akan otomatis minta login GitHub
     </script>
   </body>
 </html>
