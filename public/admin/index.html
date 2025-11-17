@@ -1,1 +1,9 @@
-<html><body><script src='https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js'></script></body></html>
+<script>
+  const allowed = ["mjfendin@gmail.com"];
+
+  netlifyIdentity.on("init", (user) => {
+    if (!user || !allowed.includes(user.email)) {
+      window.location.href = "/";
+    }
+  });
+</script>
