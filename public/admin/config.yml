@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: mjfendin/netlify-content-app   # ganti dengan nama repo kamu
   branch: main
+  base_url: https://buildcontent-arc.vercel.app
+  auth_endpoint: /api/auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
