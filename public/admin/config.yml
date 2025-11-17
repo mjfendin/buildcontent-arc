@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: mjfendin/netlify-content-app   # ganti dengan nama repo kamu
+  repo: mjfendin/buildcontent-arc
   branch: main
   base_url: https://buildcontent-arc.vercel.app
   auth_endpoint: /api/auth
