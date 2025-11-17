@@ -1,1 +1,5 @@
-module.exports = { content: ["./pages/**/*.{js,jsx}", "./components/**/*.{js,jsx}", "./content/**/*.{md}"], theme: { extend: {} }, plugins: [] };
+module.exports = {
+  content: ["./pages/**/*.{js,jsx}", "./components/**/*.{js,jsx}", "./content/**/*.{md}"],
+  theme: { extend: {} },
+  plugins: [],
+};
